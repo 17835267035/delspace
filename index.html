@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>求和、二维数组最大值、去空</title>
+</head>
+<body>
+	<script>
+		// 1-10求和
+		var sum=0;
+		var i=1;
+		while(i<=10){
+		    sum+=i;
+		    i++;
+		}
+		console.log(sum);
+
+
+		// 二维数组的最大值
+		var a=[[70,80,90],[75,85,95],[65,70,80]];
+		arr1(a);
+		function arr1(a){
+		var max=a[0][0];
+		for(var i=0;i<a.length;i++){
+		    // classes[i]
+		    for(var j=0;j<a[i].length;j++){
+		        if(max < a[i][j]){
+		            max = a[i][j];
+		        }
+		    }
+		}
+		console.log(max);
+		}
+
+
+		// 如何去空
+		// 1.是否为空
+		// 2.newarr
+		// 3.length
+
+		var arr=[1,2,3,4,,5,6,,7,8,,9,10];
+		arrdelspace(arr);
+		function arrdelspace(arr){
+		    var newarr=[];
+		    for(var i=0;i<arr.length;i++){
+		        // if(arr[i]!=undefined){
+		        //     newarr[newarr.length]=arr[i];
+		        // }
+		        if((typeof arr[i])!='undefined'){
+		            newarr[newarr.length]=arr[i];
+		        }
+		        
+		    }
+		    console.log(newarr);
+		}
+	</script>
+</body>
+</html>
